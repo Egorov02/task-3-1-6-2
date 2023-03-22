@@ -60,7 +60,7 @@ class HamsterFactory {
         Iterator<Hamster> iterator = hamstersSet.iterator();
         while (iterator.hasNext()) { // до тех пор, пока есть непройденный элемент в списке
             Hamster element = iterator.next(); // получаем следующий элемент
-            if (element.name.contains(name)) {
+            if (element.name.equals(name)) {
                 iterator.remove(); // для удаления используем метод remove() у итератора (не списка)
                 System.out.println("Хомяк '" + name + "' удалён успешно"); // если хомяк существует, то нужно удалить его и вывести сообщение: "Хомяк '[Имя удаленного хомяка]' удалён успешно"
                 return;
